@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    height: 100vh;
+    background: #f3f3ff url('sky.jpg') no-repeat center center / cover;
+    overflow: hidden;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.text-type {
+    padding-right: 3px;
+}
+
+.has-border {
+    border-right: 2px solid rgba(0, 0, 0, 0.5);
+}
