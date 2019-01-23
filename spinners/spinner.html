@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +8,23 @@
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
+
 <body>
-    <div class="main spinner-2">
+    <div class="main">
         <h1>Hello</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates laboriosam, quae neque, magni laborum quasi fuga, nesciunt voluptas eius asperiores dolorem amet. Exercitationem tempora quisquam porro pariatur ut eos expedita quas necessitatibus, maxime eligendi aliquam nam sapiente vel. Tempora dolore id ad reiciendis, fugit molestiae odit, harum sunt nobis deserunt sapiente eos vel iste ut est aspernatur, reprehenderit officia a itaque? Delectus magnam ullam quibusdam placeat harum iure?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda esse magni ut, vitae consectetur voluptatem totam iste delectus laboriosam distinctio?</p>
     </div>
+    <script>
+        const mainDiv = document.querySelector('.main')
+        const p = document.querySelector('.main p')
+        mainDiv.classList.add('spinner-2')
+        p.style.display = 'none'
+
+        setTimeout(() => {
+            mainDiv.classList.remove('spinner-2')
+            p.style.display = 'block'
+        }, 3000);
+    </script>
 </body>
+
 </html>

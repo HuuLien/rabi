@@ -13,6 +13,10 @@
     border-radius: 20px;
 }
 
+p {
+    text-indent: 2em;
+}
+
 .spinner-1::before {
     content: "";
     /* 往里面涨的属性 */
@@ -56,13 +60,31 @@
     animation: spinner 0.7s ease-out infinite;
 }
 
-p {
-    text-indent: 2em;
+.spinner-3::before {
+    content: "";
+    /* 往里面涨的属性 */
+    /* 下面有实验 */
+    box-sizing: border-box;
+    /* 让 spinner 在整个页面居中 */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 60px;
+    width: 60px;
+    margin-left: -30px;
+    margin-top: -30px;
+    /* 变成圆环 */
+    border-radius: 50%;
+    /* 小技巧 */
+    /* 微巴效果 */
+    border-top: 3px solid coral;
+    border-right: 3px solid transparent;
+    animation: spinner 0.7s linear infinite;
 }
 
 @keyframes spinner {
     to {
-        transform: rotate(359deg);
+        transform: rotate(360deg);
     }
 }
 
