@@ -1,0 +1,82 @@
+* {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.main {
+    height: 100vm;
+    background: #f3f3f3;
+    width: 70%;
+    margin: 10px auto;
+    font-size: 1.156em/1.3;
+    border-radius: 20px;
+}
+
+.spinner-1::before {
+    content: "";
+    /* 往里面涨的属性 */
+    /* 下面有实验 */
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 60px;
+    width: 60px;
+    border: 4px solid lightgrey;
+    border-radius: 50%;
+    margin-left: -30px;
+    margin-top: -30px;
+    /* transform: translateY(-50%); */
+    /* transform: translateX(-50%); */
+    /* 小技巧 */
+    border-top-color: orange;
+    animation: spinner 0.7s linear infinite;
+}
+
+.spinner-2::before {
+    content: "";
+    /* 往里面涨的属性 */
+    /* 下面有实验 */
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 60px;
+    width: 60px;
+    border: 4px solid transparent;
+    border-radius: 50%;
+    margin-left: -30px;
+    margin-top: -30px;
+    /* transform: translateY(-50%); */
+    /* transform: translateX(-50%); */
+    /* 小技巧 */
+    border-top-color: orange;
+    border-bottom-color: orange;
+    animation: spinner 0.7s ease-out infinite;
+}
+
+p {
+    text-indent: 2em;
+}
+
+@keyframes spinner {
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+/* 这里是实验 */
+/* .yi {
+    height: 100px;
+    width: 100px;
+    background: red;
+    padding: 20px;
+}
+.er {
+    height: 100px;
+    width: 100px;
+    background: red;
+    padding: 20px;
+    box-sizing: border-box;
+} */
